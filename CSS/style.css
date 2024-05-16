@@ -1,0 +1,204 @@
+* {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.botones {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+}
+.botones img {
+  width: 130%;
+  height: auto;
+}
+.botones:hover {
+  background-color: rgb(243, 149, 61);
+}
+.botones:active {
+  /* Esto cambia lo que pasa cuando se hace click en el boton */
+  background-color: rgb(
+    243,
+    149,
+    61
+  ) !important; /* important significa prioridad sobre otro estilo */
+}
+.sesion {
+  text-decoration: none;
+  color: black;
+}
+.sesion:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.menu {
+  background-color: rgb(250, 129, 36);
+  font-weight: bold;
+}
+.logo {
+  border-right: 1px solid rgb(69, 82, 89);
+  padding-right: 20px;
+}
+
+.txtMenu {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.txtMenu a:hover {
+  text-decoration: underline;
+}
+.carritoVacio img {
+  padding-left: 20%;
+  padding-top: 50%;
+}
+.carritoVacio p {
+  color: rgb(138, 138, 138);
+  text-align: center;
+}
+.btnRealizarPedido {
+  background-color: rgb(25, 135, 84);
+  color: white;
+  border: none;
+}
+.btnRealizarPedido:hover {
+  background-color: rgb(25, 135, 84);
+  color: white;
+  border: none;
+  text-decoration: underline;
+}
+.btnBuscar {
+  background-color: rgb(25, 135, 84);
+  color: white;
+}
+.btnBuscar:hover {
+  background-color: rgb(25, 135, 84);
+  color: white;
+  text-decoration: underline;
+}
+.acordeon {
+  width: 255px;
+}
+.nosotros {
+  text-align: justify;
+  margin: 200px;
+  margin-top: 0px;
+  justify-self: center;
+}
+.usuario {
+  display: flex;
+  align-items: center;
+}
+.usuario p {
+  margin-left: -60px;
+  font-weight: bold;
+}
+.iconoCuenta {
+  width: 100px;
+  margin: 100px;
+  margin-top: 60px;
+}
+.menuUser {
+  margin-left: 100px;
+  width: 800px;
+}
+
+.adoptar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.adoptar img {
+  width: 300px;
+}
+.adoptar a {
+  color: black;
+}
+#acordeonAdopta {
+  margin-left: 240px;
+}
+.carrusel {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.w-100 {
+  border-radius: 5px;
+}
+.card {
+  margin: 2px;
+  border-radius: 5px;
+}
+.card-footer {
+  background-color: rgb(250, 129, 36);
+  margin-bottom: 2px;
+}
+.card-header {
+  background-color: rgb(250, 129, 36);
+}
+.btn-tres {
+  background-color: red;
+  border-color: black;
+  color: white;
+}
+.btn-tres:hover {
+  background-color: red;
+  border-color: black;
+  color: white;
+  text-decoration: underline;
+}
+.btn-secundario {
+  background-color: white;
+  border-color: black;
+}
+.btn-secundario:hover {
+  background-color: white;
+  border-color: black;
+  text-decoration: underline;
+}
+.acord-letter {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: black;
+}
+.usuarioEntrar {
+  align-items: center;
+}
+.usuarioEntrar img {
+  width: 200px;
+}
+.btnEntrar {
+  background-color: rgb(25, 135, 84);
+  color: white;
+}
+.btnEntrar:hover {
+  background-color: rgb(25, 135, 84);
+  color: white;
+  text-decoration: underline;
+}
+.contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.card-adopt {
+  width: 325px;
+  background-color: rgb(250, 129, 36);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, 0, 2);
+  margin: 20px;
+}
+.card-adopt img {
+  width: 100%;
+  height: auto;
+}
+.card-contenido {
+  padding: 16px;
+}
+.card-contenido h3 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fundacion P&G</title>
+    <link rel="icon" href="FOTOS/logo color.png " type="image/png" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <!-- barra de navegacion -->
+    <nav class="navbar navbar-expand-lg menu">
+      <div class="container-fluid">
+        <div class="logo">
+          <a class="navbar-brand" href="home.html"
+            ><img src="FOTOS/logo color.png" alt="Logo" width="70px"
+          /></a>
+          <span class="navbar-text"> FUNDACION P&G </span>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item txtMenu">
+              <a class="nav-link active" aria-current="page" href="home.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item txtMenu">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="productos.html"
+                >Nuestros productos</a
+              >
+            </li>
+            <li class="nav-item txtMenu">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="nosotros.html"
+                >Nosotros</a
+              >
+            </li>
+            <li class="nav-item txtMenu">
+              <a class="nav-link active" aria-current="page" href="adopta.html"
+                >Adopta</a
+              >
+            </li>
+            <li class="nav-item txtMenu">
+              <a class="nav-link active" aria-current="page" href="cuenta.html"
+                >Mi cuenta</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- barra de busqueda -->
+        <form class="d-flex" role="search" style="margin-right: 10px">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Buscar"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-succes btnBuscar" type="submit">
+            Buscar
+          </button>
+        </form>
+        <!-- Iniciar sesion / registrarse -->
+        <div class="mt-auto">
+          <div>
+            <nav aria-label="breadcrumb ">
+              <ol class="breadcrumb">
+                <a class="btn sesion" href="registrarse.html" role="button"
+                  >Registrarse</a
+                >
+                <a class="btn sesion" href="entrar.html" role="button"
+                  >Iniciar Sesión</a
+                >
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <!-- boton carrito de compras -->
+        <button
+          class="btn btn-primary botones ms-auto"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >
+          <img src="FOTOS/carrito.png" alt="Carrito" />
+        </button>
+      </div>
+    </nav>
+    <!--  fin de barra de navegacion -->
+
+    <!--  carrito de compras / Offcanvas -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Carrito de compras
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <!-- Contenido del carrito -->
+        <div class="carritoVacio">
+          <img
+            src="FOTOS/carrito vacio.png"
+            alt="Carrito vacio"
+            width="300px"
+          /><br />
+          <p>Tu carrito está vacío</p>
+        </div>
+        <!-- btn para comprar-->
+        <button type="button" class="btn btn-info mt-auto btnRealizarPedido">
+          Realizar Pedido
+        </button>
+      </div>
+    </div>
+    <!-- fin carrito de compras -->
+
+    <!-- banner -->
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide carrusel"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="FOTOS/banner1.PNG" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="FOTOS/banner2.PNG" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="FOTOS/banner3.PNG" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- fin de banner -->
+
+    <!-- producto -->
+    <!-- card 1 -->
+    <div class="card-group">
+      <div class="card">
+        <img src="FOTOS/camaperro.jpg" class="card-img-top" alt="Cama" />
+        <div class="card-body">
+          <h5 class="card-title">
+            Leeby Cuna Antiestrés Desfundable Gris para perros
+          </h5>
+          <p class="card-text">$21.990 - Talla S</p>
+        </div>
+        <div class="card-footer">
+          <a href="productos.html" class="btn btn-secundario">Ver Producto</a>
+          <!-- boton modal -->
+          <button
+            type="button"
+            class="btn btn-secundario"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Vista rápida
+          </button>
+        </div>
+      </div>
+
+      <!-- card 2 -->
+      <div class="card">
+        <img src="FOTOS/rascador.jpg" class="card-img-top" alt="Rascador" />
+        <div class="card-body">
+          <h5 class="card-title">Rascador surf unidad</h5>
+          <p class="card-text">$9.990</p>
+        </div>
+        <div class="card-footer">
+          <a href="productos.html" class="btn btn-secundario"> Ver Producto</a>
+                    <!-- boton modal -->
+          <button
+            type="button"
+            class="btn btn-secundario"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal2"
+          >
+            Vista rápida
+          </button>
+        </div>
+      </div>
+
+      <!-- card 3 -->
+      <div class="card">
+        <img src="FOTOS/alimento.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">
+            Bravery Salmon Adult Cat alimento para gato
+          </h5>
+          <p class="card-text">$22.990 - 2Kg</p>
+        </div>
+        <div class="card-footer">
+          <a href="productos.html" class="btn btn-secundario"> Ver Producto</a>
+                    <!-- boton modal -->
+          <button
+            type="button"
+            class="btn btn-secundario"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal3"
+          >
+            Vista rápida
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- fin producto -->
+
+    <!-- Modal 1-->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Leeby Cuna Antiestrés Desfundable Gris para perros
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body d-flex flex-column">
+            <img src="FOTOS/camaperro.jpg" alt="" />
+            <h5>Descripción</h5>
+            <p>
+              Cama cuna con textura ultra suave y desfundable. Favorece un
+              descanso óptimo con bordes acolchados elevados y una entrada baja
+              para facilitar el acceso.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 2-->
+    <div
+      class="modal fade"
+      id="exampleModal2"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Rascador surf unidad
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body d-flex flex-column">
+            <img src="FOTOS/rascador.jpg" alt="" />
+            <h5>Descripción</h5>
+            <p>Rascador ligero y adecuado para gatos.</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 3-->
+    <div
+      class="modal fade"
+      id="exampleModal3"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Bravery Salmon Adult Cat alimento para gato
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body d-flex flex-column">
+            <img src="FOTOS/alimento.jpg" alt="" />
+            <h5>Descripción</h5>
+            <p>Alimento completo para gatos adultos con salmón.</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- pie de pagina -->
+    <div class="card text-center">
+      <div class="card-header"></div>
+      <div class="card-body">
+        <h5 class="card-title">Fundacion P&G</h5>
+        <p class="card-text"></p>
+        <a href="nosotros.html" class="btn btn-tres">Donaciones</a>
+      </div>
+      <div class="card-footer text-body-secondary"></div>
+    </div>
+    <!-- fin de pie de pagina -->
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fin de bootstrap -->
+  </body>
+</html>

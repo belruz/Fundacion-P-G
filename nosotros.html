@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fundacion P&G</title>
+    <link rel="icon" href="FOTOS/logo color.png " type="image/png" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <!-- barra de navegacion -->
+    <nav class="navbar navbar-expand-lg menu">
+      <div class="container-fluid">
+        <div class="logo">
+          <a class="navbar-brand" href="home.html"
+            ><img src="FOTOS/logo color.png" alt="Logo" width="70px"
+          /></a>
+          <span class="navbar-text"> FUNDACION P&G </span>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item txtMenu">
+              <a class="nav-link active" aria-current="page" href="home.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item txtMenu">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="productos.html"
+                >Nuestros productos</a
+              >
+            </li>
+            <li class="nav-item txtMenu">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="nosotros.html"
+                >Nosotros</a
+              >
+            </li>
+            <li class="nav-item txtMenu">
+              <a class="nav-link active" aria-current="page" href="adopta.html"
+                >Adopta</a
+              >
+            </li>
+            <li class="nav-item txtMenu">
+              <a class="nav-link active" aria-current="page" href="cuenta.html"
+                >Mi cuenta</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- barra de busqueda -->
+        <form class="d-flex" role="search" style="margin-right: 10px">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Buscar"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-succes btnBuscar" type="submit">
+            Buscar
+          </button>
+        </form>
+        <!-- Iniciar sesion / registrarse -->
+        <div class="mt-auto">
+          <div>
+            <nav aria-label="breadcrumb ">
+              <ol class="breadcrumb">
+                <a class="btn sesion" href="registrarse.html" role="button"
+                  >Registrarse</a
+                >
+                <a class="btn sesion" href="entrar.html" role="button"
+                  >Iniciar Sesión</a
+                >
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <!-- boton carrito de compras -->
+        <button
+          class="btn btn-primary botones ms-auto"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >
+          <img src="FOTOS/carrito.png" alt="Carrito" />
+        </button>
+      </div>
+    </nav>
+    <!--  fin de barra de navegacion -->
+
+    <!--  carrito de compras / Offcanvas -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Carrito de compras
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <!-- Contenido del carrito -->
+        <div class="carritoVacio">
+          <img
+            src="FOTOS/carrito vacio.png"
+            alt="Carrito vacio"
+            width="300px"
+          /><br />
+          <p>Tu carrito está vacío</p>
+        </div>
+        <!-- btn para comprar-->
+        <button type="button" class="btn btn-info mt-auto btnRealizarPedido">
+          Realizar Pedido
+        </button>
+      </div>
+    </div>
+    <!-- fin carrito de compras -->
+
+    <!-- cuerpo de la pagina -->
+    <div class="d-flex flex-column" style="align-items: center">
+      <img src="FOTOS/banner nosotros.jpg" alt="banner" />
+      <h4>Sobre Fundación P&G</h4>
+      <p style="margin: 50px">
+        La Fundación P&G es un lugar donde la pasión por los animales se une con
+        el compromiso de hacer del mundo un lugar mejor para ellos. Somos una
+        organización dedicada a la protección y bienestar de perros y gatos en
+        situación de vulnerabilidad. En nuestra fundación, no solo nos
+        esforzamos por brindarles un hogar amoroso y seguro a estos adorables
+        compañeros, sino que también trabajamos incansablemente para
+        encontrarles familias adoptivas que les den el cariño y cuidado que
+        merecen. <br />
+        <br />Además de ser un refugio para los animales necesitados, somos una
+        tienda comprometida con el bienestar animal. En nuestras instalaciones,
+        ofrecemos una amplia gama de alimentos de alta calidad, accesorios,
+        juguetes y otros productos esenciales para el cuidado de tus mascotas.
+        Cada compra que realizas en nuestra tienda no solo contribuye al
+        sustento de nuestros animales rescatados, sino que también apoya
+        directamente nuestra misión de promover la adopción responsable y la
+        conciencia sobre el cuidado animal. <br />
+        <br />En la Fundación P&G, creemos en el poder transformador del amor y
+        la compasión hacia los animales. Únete a nosotros en nuestro viaje hacia
+        un mundo donde cada mascota pueda vivir una vida feliz y saludable.
+        Juntos, podemos hacer una diferencia significativa en la vida de
+        aquellos que no tienen voz.
+      </p>
+      <div>
+        <a href="" class="btn btn-tres">Donar</a>
+      </div>
+    </div>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fin de bootstrap -->
+  </body>
+</html>
