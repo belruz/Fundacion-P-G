@@ -71,9 +71,8 @@ $(document).ready(function(){
             return;
         }
 
-        // password
-        if(password.length <1){
-            alert("Ingrese la contraseña");
+        if(password.length < 8 || !/\d/.test(password) || !/[A-Z]/.test(password)){
+            alert("La contraseña debe tener al menos 8 caracteres, un número y una letra mayúscula");
             return;
         }
 
