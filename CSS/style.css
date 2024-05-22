@@ -227,3 +227,13 @@
   justify-content: end;
   margin: 25px;
 }
+.buttonclear{
+  background-color: rgb(135, 25, 25);
+  color: white;
+  border-radius: 5px;
+}
+.buttonclear:hover {
+  background-color: rgb(135, 25, 25);
+  color: white;
+  text-decoration: underline;
+}

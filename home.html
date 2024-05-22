@@ -190,8 +190,17 @@
 
         </script>
         <!-- btn para comprar-->
-        <button type="button" class="btn btn-info mt-auto btnRealizarPedido" onclick="prueba()">
-          Realizar Pedido 
+        <script>
+          function clearCar(){
+            localStorage.clear("productos")
+            location.reload(); // Recarga la página
+          }
+        </script>
+        <button type="button" class="buttonclear" onclick="clearCar()">
+          Vaciar Carrito
+        </button>
+        <button type="button" class="btn btn-info mt-auto btnVerde" onclick="location.reload();">
+          Actualizar Carrito 
         </button>
       </div>
     </div>
