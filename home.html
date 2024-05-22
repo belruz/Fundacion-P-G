@@ -354,7 +354,7 @@
 
       var linkProducto = document.createElement("a");
       linkProducto.href = "productos.html";
-      linkProducto.className = "btn btn-secundario";
+      linkProducto.className = "btn btnProducto";
       linkProducto.textContent = "Ver Producto";
 
       var botonModal = document.createElement("button");
@@ -371,7 +371,7 @@
       };                
       var botonCarrito = document.createElement("button");
       botonCarrito.type = "button";
-      botonCarrito.className = "btn btn-secundario";
+      botonCarrito.className = "btn btnProducto";
       botonCarrito.textContent = "Agregar al carrito";
       botonCarrito.onclick = function() {
         agregarProductos(producto);
