@@ -189,195 +189,166 @@
     </div>
     <!-- fin Accordion -->
 
-    <!-- producto -->
-    <!-- card 1 -->
-    <div class="card-group">
-      <div class="card">
-        <img src="FOTOS/camaperro.jpg" class="card-img-top" alt="Cama" />
-        <div class="card-body">
-          <h5 class="card-title">
-            Leeby Cuna Antiestrés Desfundable Gris para perros
-          </h5>
-          <p class="card-text">$21.990 - Talla S</p>
-        </div>
-        <div class="card-footer">
-          <a href="productos.html" class="btn btn-secundario">Ver Producto</a>
-          <!-- boton modal -->
-          <button
-            type="button"
-            class="btn btn-secundario"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Vista rápida
-          </button>
-        </div>
-      </div>
 
-      <!-- card 2 -->
-      <div class="card">
-        <img src="FOTOS/rascador.jpg" class="card-img-top" alt="Rascador" />
-        <div class="card-body">
-          <h5 class="card-title">Rascador surf unidad</h5>
-          <p class="card-text">$9.990</p>
-        </div>
-        <div class="card-footer">
-          <a href="productos.html" class="btn btn-secundario"> Ver Producto</a>
-                    <!-- boton modal -->
-          <button
-            type="button"
-            class="btn btn-secundario"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal2"
-          >
-            Vista rápida
-          </button>
-        </div>
-      </div>
+    <!-- render from json -->
+    <div id="product-cards" class="row">
+    </div>
 
-      <!-- card 3 -->
-      <div class="card">
-        <img src="FOTOS/alimento.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">
-            Bravery Salmon Adult Cat alimento para gato
-          </h5>
-          <p class="card-text">$22.990 - 2Kg</p>
-        </div>
-        <div class="card-footer">
-          <a href="productos.html" class="btn btn-secundario"> Ver Producto</a>
-                    <!-- boton modal -->
-          <button
-            type="button"
-            class="btn btn-secundario"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal3"
-          >
-            Vista rápida
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- fin producto -->
 
-    <!-- Modal 1-->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Leeby Cuna Antiestrés Desfundable Gris para perros
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body d-flex flex-column">
-            <img src="FOTOS/camaperro.jpg" alt="" />
-            <h5>Descripción</h5>
-            <p>
-              Cama cuna con textura ultra suave y desfundable. Favorece un
-              descanso óptimo con bordes acolchados elevados y una entrada baja
-              para facilitar el acceso.
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
+    <!-- Modal dinámico -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column">
+                <img id="modal-imagen" src="" class="img-fluid" alt="Imagen del producto" />
+                <h5>Descripción</h5>
+                <p id="modal-descripcion"></p>
+                <p id="modal-precio"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Modal 2-->
-    <div
-      class="modal fade"
-      id="exampleModal2"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Rascador surf unidad
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body d-flex flex-column">
-            <img src="FOTOS/rascador.jpg" alt="" />
-            <h5>Descripción</h5>
-            <p>Rascador ligero y adecuado para gatos.</p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 3-->
-    <div
-      class="modal fade"
-      id="exampleModal3"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Bravery Salmon Adult Cat alimento para gato
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body d-flex flex-column">
-            <img src="FOTOS/alimento.jpg" alt="" />
-            <h5>Descripción</h5>
-            <p>Alimento completo para gatos adultos con salmón.</p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
+        <!-- variable de productos -->
+          <script>
+          var productos = [
+          {
+              "id": 1,
+              "nombre": "Leeby Cuna Antiestrés Desfundable Gris para perros",
+              "precio": "21.990",
+              "talla": "S",
+              "imagen": "FOTOS/camaperro.jpg",
+              "descripcion": "Cama cuna con textura ultra suave y desfundable. Favorece un descanso óptimo con bordes acolchados elevados y una entrada baja para facilitar el acceso."
+          },
+          {
+              "id": 2,
+              "nombre": "Rascador surf unidad",
+              "precio": "9.990",
+              "imagen": "FOTOS/rascador.jpg",
+              "descripcion": "Rascador ligero y adecuado para gatos."
+          },
+          {
+              "id": 3,
+              "nombre": "Bravery Salmon Adult Cat alimento para gato",
+              "precio": "22.990",
+              "lot": "2KG",
+              "imagen": "FOTOS/alimento.jpg",
+              "descripcion": "Alimento completo para gatos adultos con salmón."
+          },
+          {
+              "id": 4,
+              "nombre": "Cylinder food dispenser",
+              "precio": "14.990",
+              "lot": "3.5L",
+              "imagen": "FOTOS/dispensador.jpg",
+              "descripcion": "Dispensador de comida para perros en forma cilíndrica."
+          },
+          {
+              "id": 5,
+              "nombre": "Shampoo neutro gato",
+              "precio": "4.990",
+              "lot": "260cc",
+              "imagen": "FOTOS/shampoo.jpg",
+              "descripcion": "Shampoo para gatos con aroma a bamboo."
+          },
+          {
+              "id": 6,
+              "nombre": "Ice cono azul unidad",
+              "precio": "9.990",
+              "imagen": "FOTOS/juguete.jpg",
+              "descripcion": "Juguete diseñado para mantener a tu perro fresco y entretenido."
+          }
+      ];
+      
+      // Función para mostrar los productos en tarjetas HTML
+      function mostrarProductos(productos) {
+        var contenedor = document.getElementById("product-cards");
+        productos.forEach(function(producto) {
+                    var card = document.createElement("div");
+                    card.className = "card col-md-4 m-2";
+                    card.style.width = "18rem";
+
+                    var imagen = document.createElement("img");
+                    imagen.src = producto.imagen;
+                    imagen.className = "card-img-top";
+                    imagen.alt = "Imagen del producto";
+
+                    var cuerpo = document.createElement("div");
+                    cuerpo.className = "card-body";
+
+                    var titulo = document.createElement("h5");
+                    titulo.className = "card-title";
+                    titulo.textContent = producto.nombre;
+
+                    var precio = document.createElement("p");
+                    precio.className = "card-text";
+                    precio.textContent = "Precio: $" + producto.precio;
+
+                    var detalle = document.createElement("p");
+                    detalle.className = "card-text";
+                    detalle.textContent = producto.talla ? "Talla: " + producto.talla : (producto.lot ? "Lote: " + producto.lot : "");
+
+                    var footer = document.createElement("div");
+                    footer.className = "card-footer";
+
+                    var linkProducto = document.createElement("a");
+                    linkProducto.href = "productos.html";
+                    linkProducto.className = "btn btnProducto";
+                    linkProducto.textContent = "Ver Producto";
+
+                    var botonModal = document.createElement("button");
+                    botonModal.type = "button";
+                    botonModal.className = "btn btnProducto";
+                    botonModal.setAttribute("data-bs-toggle", "modal");
+                    botonModal.setAttribute("data-bs-target", "#exampleModal");
+                    botonModal.textContent = "Vista rápida";
+                    botonModal.onclick = function() {
+                        document.getElementById("exampleModalLabel").textContent = producto.nombre;
+                        document.getElementById("modal-imagen").src = producto.imagen;
+                        document.getElementById("modal-descripcion").textContent = producto.descripcion;
+                        document.getElementById("modal-precio").textContent = "$" + producto.precio;
+                    };
+
+                    var botonCarrito = document.createElement("button");
+                    botonCarrito.type = "button";
+                    botonCarrito.className = "btn btnProducto";
+                    botonCarrito.textContent = "Agregar al carrito";
+                    botonCarrito.onclick = function() {
+                        agregarProductos(producto);
+                    };
+
+                    // Agregar elementos al cuerpo de la tarjeta
+                    cuerpo.appendChild(titulo);
+                    cuerpo.appendChild(detalle);
+                    cuerpo.appendChild(precio);
+
+                    // Agregar elementos al pie de la tarjeta
+                    footer.appendChild(linkProducto);
+                    footer.appendChild(botonModal);
+                    footer.appendChild(botonCarrito);
+
+                    // Agregar elementos a la tarjeta
+                    card.appendChild(imagen);
+                    card.appendChild(cuerpo);
+                    card.appendChild(footer);
+
+                    // Agregar la tarjeta al contenedor
+                    contenedor.appendChild(card);
+        });
+      }
+
+  // Llamar a la función para mostrar los productos al cargar la página
+      mostrarProductos(productos)
+      agregarProductos(producto) 
+      </script>
 
     <!-- bootstrap -->
     <script
