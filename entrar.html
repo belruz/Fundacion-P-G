@@ -12,7 +12,11 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="CSS/style.css" />
+        <!-- css -->
+        <link rel="stylesheet" href="CSS/style.css" />
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="JS/validar_form.js"></script>
   </head>
   <body>
     <!-- barra de navegacion -->
@@ -156,30 +160,18 @@
     </div>
 
     <div class="d-flex flex-column usuarioEntrar">
-      <form style="width: 400px">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Correo: </label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" class="form-text"></div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label"
-            >Contraseña:</label
-          >
-          <input
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-          />
-        </div>
-        <button type="submit" class="btn btnEntrar">Iniciar Sesión</button>
+      <form id="formEntrar" style="width: 400px">
+
+          <label for="correo" >Correo: </label>
+          <input type="text" class="form-control" id="correo" name="correo"/><br>
+
+          <label for="password" >Contraseña:</label>
+          <input type="password" class="form-control" id="password" name="password"/><br>
+
+          <button type="submit" class="btn btnEntrar">Iniciar Sesión</button>
       </form>
     </div>
+
 
     <!-- bootstrap -->
     <script
