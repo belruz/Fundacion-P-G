@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "name": "Leeby Cuna Antiestrés Desfundable Gris para perros",
+        "price": "$21.990",
+        "size": "Talla S"
+    },
+    {
+        "id": 2,
+        "name": "Rascador surf unidad",
+        "price": "9.990"
+    },
+    {
+        "id": 3,
+        "name": "Bravery Salmon Adult Cat alimento para gato",
+        "price": "$22.990",
+        "lot": "2KG"
+    }
+]

@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="CSS/style.css" />
+    <script type="text/javascript" src="JS/carrito.js"></script>
   </head>
   <body>
     <!-- barra de navegacion -->
@@ -124,25 +125,73 @@
           Carrito de compras
         </h5>
         <button
+          id="carritoCompras"
           type="button"
           class="btn-close"
           data-bs-dismiss="offcanvas"
           aria-label="Close"
+          onclick="agregarProductosAlCarrito()"
         ></button>
       </div>
       <div class="offcanvas-body d-flex flex-column">
         <!-- Contenido del carrito -->
-        <div class="carritoVacio">
+        <!-- <div class="carritoVacio">
           <img
             src="FOTOS/carrito vacio.png"
             alt="Carrito vacio"
             width="300px"
-          /><br />
+          />
+          <br />
           <p>Tu carrito está vacío</p>
+        </div> -->
+
+        <div id="contenedorProductos">
         </div>
+    
+        <script>
+          function agregarProductosAlCarrito() {
+            var contenedor = document.getElementById("contenedorProductos");
+           
+            const productos = JSON.parse(localStorage.getItem("productos"))
+            productos.forEach(function(producto) {
+              // Crear elementos
+              var contenedorProducto = document.createElement("div");
+              var imagen = document.createElement("img");
+              var nombreProducto = document.createElement("p");
+              var precioProducto = document.createElement("p");
+              // Configurar atributos y contenido de los elementos
+              contenedorProducto.className = "contenedorProductos";
+              imagen.className = "imgCarritoCompras";
+              imagen.src = producto.imagen;
+              imagen.alt = producto.nombre;
+              
+              precioProducto.className = "precioProductoCarrito"
+              nombreProducto.textContent = producto.nombre;
+              precioProducto.textContent = "$" + producto.precio
+
+              // Agregar elementos al contenedor principal
+              contenedorProducto.appendChild(imagen);
+              contenedorProducto.appendChild(nombreProducto);
+              contenedorProducto.appendChild(precioProducto);
+              contenedor.appendChild(contenedorProducto)
+            });
+          }
+
+          function getTotal() {
+            const productos = JSON.parse(localStorage.getItem("productos"))
+            let total = 0
+            productos.forEach(producto =>{
+              total = total + parseInt(producto.precio.replace('.','') )
+            })
+            return total
+          }
+          var botonCarrito = document.getElementById('carritoCompras')
+          botonCarrito.onclick = agregarProductosAlCarrito()
+
+        </script>
         <!-- btn para comprar-->
-        <button type="button" class="btn btn-info mt-auto btnRealizarPedido">
-          Realizar Pedido
+        <button type="button" class="btn btn-info mt-auto btnRealizarPedido" onclick="prueba()">
+          Realizar Pedido 
         </button>
       </div>
     </div>
@@ -186,77 +235,106 @@
     </div>
     <!-- fin de banner -->
 
-    <!-- producto -->
-    <!-- card 1 -->
-    <div class="card-group">
-      <div class="card">
-        <img src="FOTOS/camaperro.jpg" class="card-img-top" alt="Cama" />
-        <div class="card-body">
-          <h5 class="card-title">
-            Leeby Cuna Antiestrés Desfundable Gris para perros
-          </h5>
-          <p class="card-text">$21.990 - Talla S</p>
-        </div>
-        <div class="card-footer">
-          <a href="productos.html" class="btn btn-secundario">Ver Producto</a>
-          <!-- boton modal -->
-          <button
-            type="button"
-            class="btn btn-secundario"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Vista rápida
-          </button>
-        </div>
-      </div>
-
-      <!-- card 2 -->
-      <div class="card">
-        <img src="FOTOS/rascador.jpg" class="card-img-top" alt="Rascador" />
-        <div class="card-body">
-          <h5 class="card-title">Rascador surf unidad</h5>
-          <p class="card-text">$9.990</p>
-        </div>
-        <div class="card-footer">
-          <a href="productos.html" class="btn btn-secundario"> Ver Producto</a>
-                    <!-- boton modal -->
-          <button
-            type="button"
-            class="btn btn-secundario"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal2"
-          >
-            Vista rápida
-          </button>
-        </div>
-      </div>
-
-      <!-- card 3 -->
-      <div class="card">
-        <img src="FOTOS/alimento.jpg" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">
-            Bravery Salmon Adult Cat alimento para gato
-          </h5>
-          <p class="card-text">$22.990 - 2Kg</p>
-        </div>
-        <div class="card-footer">
-          <a href="productos.html" class="btn btn-secundario"> Ver Producto</a>
-                    <!-- boton modal -->
-          <button
-            type="button"
-            class="btn btn-secundario"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal3"
-          >
-            Vista rápida
-          </button>
-        </div>
-      </div>
+    <!-- render from json -->
+    <div id="product-cards" class="row">
     </div>
-    <!-- fin producto -->
+    
+    <!-- variable de productos -->
+    <script>
+     var productos = [
+    {
+        "id": 1,
+        "nombre": "Leeby Cuna Antiestrés Desfundable Gris para perros",
+        "precio": "21.990",
+        "talla": "Talla S",
+        "imagen": "FOTOS/camaperro.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Rascador surf unidad",
+        "precio": "9.990",
+        "imagen": "FOTOS/rascador.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Bravery Salmon Adult Cat alimento para gato",
+        "precio": "22.990",
+        "lot": "2KG",
+        "imagen": "FOTOS/alimento.jpg"
+    }
+];
+      
+      // Función para mostrar los productos en tarjetas HTML
+  function mostrarProductos(productos) {
+    var contenedor = document.getElementById("product-cards");
+    productos.forEach(function(producto) {
+      var card = document.createElement("div");
+      card.className = "cardProducts";
+      var imagen = document.createElement("img");
+      imagen.src = producto.imagen;
+      imagen.className = "card-img-top";
+      imagen.alt = "Imagen del producto";
 
+      var cuerpo = document.createElement("div");
+      cuerpo.className = "card-body";
+
+      var titulo = document.createElement("h5");
+      titulo.className = "card-title";
+      titulo.textContent = producto.nombre;
+
+      var precio = document.createElement("p");
+      precio.className = "card-text";
+      precio.textContent = "$" + producto.precio + " - Talla " + producto.talla;
+
+      var footer = document.createElement("div");
+      footer.className = "card-footer";
+
+      var containerButtons = document.createElement("div");
+      containerButtons.className = "containerButtons";
+
+      var linkProducto = document.createElement("a");
+      linkProducto.href = "productos.html";
+      linkProducto.className = "btn btn-secundario";
+      linkProducto.textContent = "Ver Producto";
+
+      var botonModal = document.createElement("button");
+      botonModal.type = "button";
+      botonModal.className = "btn btn-secundario";
+      botonModal.setAttribute("data-bs-toggle", "modal");
+      botonModal.setAttribute("data-bs-target", "#exampleModal");
+      botonModal.textContent = "Vista rápida";
+
+      var botonCarrito = document.createElement("button");
+      botonCarrito.type = "button";
+      botonCarrito.className = "btn btn-secundario";
+      botonCarrito.textContent = "Agregar al carrito";
+      botonCarrito.onclick = function() {
+        agregarProductos(producto);
+      };
+
+      // Agregar elementos al cuerpo de la tarjeta
+      cuerpo.appendChild(titulo);
+      cuerpo.appendChild(precio);
+
+      // Agregar elementos al pie de la tarjeta
+      footer.appendChild(linkProducto);
+      footer.appendChild(botonModal);
+      footer.appendChild(botonCarrito);
+
+      // Agregar elementos a la tarjeta
+      card.appendChild(imagen);
+      card.appendChild(cuerpo);
+      card.appendChild(footer);
+
+      // Agregar la tarjeta al contenedor
+      contenedor.appendChild(card);
+    });
+  }
+
+  // Llamar a la función para mostrar los productos al cargar la página
+  mostrarProductos(productos)
+</script>
+    </script>
     <!-- Modal 1-->
     <div
       class="modal fade"
@@ -395,6 +473,5 @@
       crossorigin="anonymous"
     ></script>
     <!-- fin de bootstrap -->
-
   </body>
 </html>

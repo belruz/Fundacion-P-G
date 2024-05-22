@@ -130,9 +130,15 @@
   margin: 2px;
   border-radius: 5px;
 }
+.cardProducts {
+  margin: 2px;
+  border-radius: 5px;
+  width: 30%;
+}
 .card-footer {
   background-color: rgb(250, 129, 36);
   margin-bottom: 2px;
+  margin: 15px;
 }
 .card-header {
   background-color: rgb(250, 129, 36);
@@ -151,11 +157,15 @@
 .btn-secundario {
   background-color: white;
   border-color: black;
+
 }
 .btn-secundario:hover {
   background-color: white;
   border-color: black;
   text-decoration: underline;
+}
+.containerButtons{
+  margin: 10px;
 }
 .acord-letter {
   font-family: Arial, Helvetica, sans-serif;
@@ -201,4 +211,19 @@
 .card-contenido h3 {
   font-size: 28px;
   margin-bottom: 8px;
+}
+.contenedorProductos{
+  display: flex;
+  flex-direction: row;
+}
+.imgCarritoCompras{
+  width: 50px;
+}
+.precioProductoCarrito{
+  margin-left: 75px;
+}
+.totalPrecioCarrito{
+  display: flex;
+  justify-content: end;
+  margin: 25px;
 }
